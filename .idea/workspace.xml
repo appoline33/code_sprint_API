@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7268ad23-236d-4f1c-9425-d7b71fe6375c" name="Default Changelist" comment="Modification du fichier Readme.md">
-      <change afterPath="$PROJECT_DIR$/src/Middleware/ForceJson.php" afterDir="false" />
+    <list default="true" id="7268ad23-236d-4f1c-9425-d7b71fe6375c" name="Default Changelist" comment="Installation des packages&#10;- Lightouse (GraphQL)&#10;- Fruitcake Cors&#10;- Middleware ForceJson.php">
+      <change afterPath="$PROJECT_DIR$/src/Domain/Catalog/Entity/Attribute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Catalog/Entity/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Catalog/Entity/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Catalog/Entity/ProductVariant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Catalog/Entity/Variant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Establishment/Entity/Establishment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Establishment/Entity/Hour.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Thumbnail/Thumbnail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b4048133-1dec-44d5-8771-398855c8d41e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b4048133-1dec-44d5-8771-398855c8d41e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Provider/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +148,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1rOiqLuDWN95Y7AXj54VBBFT5vD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -161,9 +167,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Domain/Auth" />
+      <recent name="$PROJECT_DIR$/src/Domain/Establishment/Entity" />
+      <recent name="$PROJECT_DIR$/app/Models" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Domain" />
-      <recent name="$PROJECT_DIR$/src/Controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,6 +196,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modification du fichier Readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification du fichier Readme.md" />
+    <MESSAGE value="Installation des packages&#10;- Lightouse (GraphQL)&#10;- Fruitcake Cors&#10;- Middleware ForceJson.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Installation des packages&#10;- Lightouse (GraphQL)&#10;- Fruitcake Cors&#10;- Middleware ForceJson.php" />
   </component>
 </project>
