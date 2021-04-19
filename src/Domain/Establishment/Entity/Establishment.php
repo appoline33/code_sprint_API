@@ -48,6 +48,6 @@ class Establishment extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->hasMany(Category::class);
     }
 }
