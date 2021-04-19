@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7268ad23-236d-4f1c-9425-d7b71fe6375c" name="Default Changelist" comment="">
+    <list default="true" id="7268ad23-236d-4f1c-9425-d7b71fe6375c" name="Default Changelist" comment="Modification du fichier Readme.md">
+      <change afterPath="$PROJECT_DIR$/src/Middleware/ForceJson.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Provider/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Provider/RouteServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,5 +186,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modification du fichier Readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification du fichier Readme.md" />
   </component>
 </project>
