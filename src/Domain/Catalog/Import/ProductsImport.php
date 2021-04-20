@@ -20,6 +20,8 @@ class ProductsImport implements ToModel
         $thumbnailModel = "App\Domain\Thumbnail\Thumbnail";
         $variantModel = "App\Domain\Catalog\Entity\Variant";
         $attributeModel = "App\Domain\Catalog\Entity\Attribute";
+        $productVariantModel = "App\Domain\Catalog\Entity\ProductVariant";
+
         /*
          * $row[0] => Product Name
          * $row[1] => Product Name
@@ -30,8 +32,10 @@ class ProductsImport implements ToModel
          * $row[6] => Product category
          * $row[7] => Variant name
          * $row[8] => Attribute name
+         * $row[9] => PriceImpact
          */
 
+        // Global variables
         global $establishmentId;
         global $establishment;
         global $productId;
@@ -39,15 +43,17 @@ class ProductsImport implements ToModel
         global $thumbnailId;
         global $attributeId;
 
+
+        // Find establishment
         $establishment = $this->findEntity($establishmentModel, [
             'slug' => $row[0]
         ]);
-
         $establishmentId = $establishment->id;
+
 
         if(! is_null($row[1])) {
             /*
-             * Product
+             * Search if the product exists
              */
             $product = $this->findEntity($productModel, [
                 'name' => $row[1],
@@ -60,6 +66,9 @@ class ProductsImport implements ToModel
             {
                 $productId = $product->id;
             } else {
+                /*
+                 * Create product
+                 */
                 $product = $this->addEntity($productModel, [
                     'name' => $row[1],
                     'description' => $row[2],
@@ -72,6 +81,9 @@ class ProductsImport implements ToModel
         }
 
         if(!is_null($row[3])) {
+            /*
+             * Search if the thumbnail exists
+             */
             $thumbnail = $this->findEntity($thumbnailModel, [
                 'path' => $row[3],
                 'order' => 0,
@@ -83,6 +95,9 @@ class ProductsImport implements ToModel
             {
                 $thumbnailId = $thumbnail->id;
             } else {
+                /*
+                * Create thumbnail and link it to the product
+                */
                 $thumbnail = $this->addEntity($thumbnailModel, [
                     'path' => $row[3],
                     'order' => $row[4],
@@ -94,6 +109,9 @@ class ProductsImport implements ToModel
         }
 
         if(!is_null($row[7])) {
+            /*
+             * Search if variant exists
+             */
             $variant = $this->findEntity($variantModel, [
                 'name' => $row[7],
                 'establishment_id' => $establishmentId
@@ -103,6 +121,9 @@ class ProductsImport implements ToModel
             {
                 $variantId = $variant->id;
             } else {
+                /*
+                * Create variant
+                */
                 $variant = $this->addEntity($variantModel, [
                     'name' => $row[7],
                     'establishment_id' => $establishmentId,
@@ -112,6 +133,9 @@ class ProductsImport implements ToModel
         }
 
         if(!is_null($row[8])) {
+                /*
+                * Search if attribute exist
+                */
             $attribute = $this->findEntity($attributeModel, [
                 'name' => $row[8],
                 'variant_id' => $variantId,
@@ -121,6 +145,9 @@ class ProductsImport implements ToModel
             {
                 $attributeId = $attribute->id;
             } else {
+                /*
+                * Create attribute
+                */
                 $attribute = $this->addEntity($attributeModel, [
                     'name' => $row[8],
                     'variant_id' => $variantId,
@@ -129,14 +156,49 @@ class ProductsImport implements ToModel
             }
         }
 
+        /*
+         * Create relationship variant/attribute -> product
+         */
+        if(!is_null($row[7]) || !is_null($row[8])) {
+            $productVariant = $this->findEntity($productVariantModel, [
+                'product_id' => $productId,
+                'variant_id' => $variantId,
+                'attribute_id' => $attributeId,
+                'priceImpact' => $row[9],
+            ]);
+
+            if(! is_null($productVariant))
+            {
+                $productVariantId = $productVariant->id;
+            } else {
+                $productVariant = $this->addEntity($productVariantModel, [
+                    'product_id' => $productId,
+                    'variant_id' => $variantId,
+                    'attribute_id' => $attributeId,
+                    'priceImpact' => $row[9],
+                ]);
+                $productVariantId = $productVariant->id;
+            }
+        }
+
     }
 
+    /*
+     * Entity search function
+     * @Params: Model: String (With namespace) / Column: Array
+     * @return Collection
+     */
     public function findEntity($model,$column)
     {
         return $model::where($column)
             ->first();
     }
 
+    /*
+     * Add entity function
+     * @Params: Model: String (With namespace) / Data: Array
+     * @return Array
+     */
     public function addEntity($model, $data)
     {
         $entity = $model::create($data);
@@ -144,6 +206,11 @@ class ProductsImport implements ToModel
         return $entity;
     }
 
+    /*
+     * Find relationship between two models
+     * @Params: Model: String (With namespace) / searchArray: Array
+     * @return Collection
+     */
     public function findRelation($model,$searchArray = [])
     {
         return $model::where($searchArray)

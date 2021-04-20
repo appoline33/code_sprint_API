@@ -27,4 +27,6 @@ class ProductVariant extends Model
      *
      * @var array
      */
+
+    protected $table = "product_variant";
 }

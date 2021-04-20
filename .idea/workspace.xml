@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7268ad23-236d-4f1c-9425-d7b71fe6375c" name="Default Changelist" comment="Script d'importation des bars">
-      <change afterPath="$PROJECT_DIR$/src/Domain/Catalog/Import/ProductsImport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b4048133-1dec-44d5-8771-398855c8d41e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b4048133-1dec-44d5-8771-398855c8d41e.xml" afterDir="false" />
+    <list default="true" id="7268ad23-236d-4f1c-9425-d7b71fe6375c" name="Default Changelist" comment="Script d'importation des produits et ses variantes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Catalog/Entity/ProductVariant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Catalog/Entity/ProductVariant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Catalog/Import/ProductsImport.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Catalog/Import/ProductsImport.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -137,6 +137,21 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/mll-lab/laravel-graphql-playground" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/nuwave/lighthouse" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/haydenpierce/class-finder" />
+      <path value="$PROJECT_DIR$/vendor/laragraph/utils" />
+      <path value="$PROJECT_DIR$/vendor/thecodingmachine/safe" />
+      <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/goldspecdigital/laravel-eloquent-uuid" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rOiqLuDWN95Y7AXj54VBBFT5vD" />
@@ -152,7 +167,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Domain/Catalog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -162,11 +177,11 @@
       <recent name="$PROJECT_DIR$/src/Domain/Catalog/Entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Controller" />
+      <recent name="$PROJECT_DIR$/src/Domain/Catalog/Commands" />
       <recent name="$PROJECT_DIR$/src/Domain/Establishment" />
+      <recent name="$PROJECT_DIR$/src/Controller" />
       <recent name="$PROJECT_DIR$/src/Domain/Auth" />
       <recent name="$PROJECT_DIR$/src/Domain/Establishment/Entity" />
-      <recent name="$PROJECT_DIR$/app/Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,12 +204,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modification du fichier Readme.md" />
     <MESSAGE value="Installation des packages&#10;- Lightouse (GraphQL)&#10;- Fruitcake Cors&#10;- Middleware ForceJson.php" />
     <MESSAGE value="Création de l'API des bars&#10;- Requête des bars&#10;- Requête des categories&#10;- Requête des produits&#10;- Requête des variants&#10;- Requête des thumbnail&#10;- Requête des attributs" />
     <MESSAGE value="Script d'importation des bars" />
-    <option name="LAST_COMMIT_MESSAGE" value="Script d'importation des bars" />
+    <MESSAGE value="Script d'importation des produits et ses variantes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Script d'importation des produits et ses variantes" />
   </component>
 </project>
